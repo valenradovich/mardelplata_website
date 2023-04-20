@@ -15,15 +15,15 @@ const getWeatherData = async () => {
     ];
 
     const weatherData = {
-      /*mainWeather: data.weather[0].description,*/
-      mainWeather: 'clear sky',
+      mainWeather: data.weather[0].id,
       currentDayName: days[new Date().getDay()],
       currentTime: new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' }),
       temperature: data.main.temp.toFixed(0),
       sunrise: new Date(data.sys.sunrise * 1000).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' }),
       sunset: new Date(data.sys.sunset * 1000).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' }),
       humidity: data.main.humidity,
-      precipitation: data.weather[0].main === 'Rain' ? 100 : 0
+      precipitation_probability: data.clouds.all,
+      
     };
   
     return weatherData;

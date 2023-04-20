@@ -119,80 +119,73 @@ const IndexPage = () => {
 
   let weatherIcon = null;
 
+  // VER SI ESTO SE PUEDE HACER POR ID DE LA WEB QUE ESTA GUARDADA EN LA BARRA DE MARCADORES
   if (weatherData) {
-    if (weatherData.mainWeather === "clear sky" && weatherData.sunset >= weatherData.currentTime) {
+    if (weatherData.mainWeather === 800 && weatherData.sunset >= weatherData.currentTime) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974833.png"}
           alt={weatherData.mainWeather}
         />
       );
-    }else if (weatherData.mainWeather === "clear sky" && weatherData.sunset <= weatherData.currentTime) {
+    }else if (weatherData.mainWeather === 800 && weatherData.sunset <= weatherData.currentTime) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974813.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === "overcast clouds") {
+    } else if (weatherData.mainWeather >= 802 && weatherData.mainWeather <= 804) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974809.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'shower rain') {
+    } else if (weatherData.mainWeather >= 500 && weatherData.mainWeather <= 531) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974826.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'snow') {
+    } else if (weatherData.mainWeather >= 600 && weatherData.mainWeather <= 622) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974830.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'few clouds') {
+    } else if (weatherData.mainWeather === 801) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974835.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'thunderstorm') {
+    } else if (weatherData.mainWeather >= 200 && weatherData.mainWeather <= 232) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974845.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'mist') {
+    } else if (weatherData.mainWeather >= 701 && weatherData.mainWeather <= 781) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974809.png"}
           alt={weatherData.mainWeather}
         />
       );
-    } else if (weatherData.mainWeather === 'drizzle') {
+    } else if (weatherData.mainWeather >= 300 && weatherData.mainWeather <= 321) {
       weatherIcon = (
         <img
           src={"https://cdn-icons-png.flaticon.com/512/6974/6974819.png"}
           alt={weatherData.mainWeather}
         />
       );
-  } else if (weatherData.mainWeather === 'rain') {
-    weatherIcon = (
-      <img
-        src={"https://cdn-icons-png.flaticon.com/512/6974/6974819.png"}
-        alt={weatherData.mainWeather}
-      />
-    );
+  }
 }
-}
-
 
   return (
 
@@ -217,7 +210,7 @@ const IndexPage = () => {
                           </div>
                           <div className={styles.cLUMYz}><img src="https://www.svgrepo.com/show/390943/drizzling.svg"
                               alt="precipitacion_probability"  />
-                            <p>{weatherData.precipitation}%</p>
+                            <p>{weatherData.precipitation_probability}%</p>
                           </div>
                         </div>
                         <div className={styles.bxjPYi}>
