@@ -10,7 +10,7 @@ Functionalities:
 - On the right side of the screen you can appreciate the appearance of an icon style image, respective to the weather that the city is experiencing in real time.
 
 ## Images:
-![Website](src/images/favicon.jpg)
+![Website](src/images/mardelplata-website.png)
 
 ## Technologies:
 - Built with Gatsby.js, using Node, React and CSS. 
