@@ -118,9 +118,9 @@ const IndexPage = () => {
   }, []);
 
   let weatherIcon = null;
-
-  // VER SI ESTO SE PUEDE HACER POR ID DE LA WEB QUE ESTA GUARDADA EN LA BARRA DE MARCADORES
+  
   if (weatherData) {
+    // clear sky during the day
     if (weatherData.mainWeather === 800 && weatherData.sunset >= weatherData.currentTime) {
       weatherIcon = (
         <img
@@ -128,6 +128,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // clear sky during the night
     }else if (weatherData.mainWeather === 800 && weatherData.sunset <= weatherData.currentTime) {
       weatherIcon = (
         <img
@@ -135,6 +136,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // cloudy
     } else if (weatherData.mainWeather >= 802 && weatherData.mainWeather <= 804) {
       weatherIcon = (
         <img
@@ -142,6 +144,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // rain
     } else if (weatherData.mainWeather >= 500 && weatherData.mainWeather <= 531) {
       weatherIcon = (
         <img
@@ -149,6 +152,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // snow
     } else if (weatherData.mainWeather >= 600 && weatherData.mainWeather <= 622) {
       weatherIcon = (
         <img
@@ -156,6 +160,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // few clouds
     } else if (weatherData.mainWeather === 801) {
       weatherIcon = (
         <img
@@ -163,6 +168,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // thunderstorm
     } else if (weatherData.mainWeather >= 200 && weatherData.mainWeather <= 232) {
       weatherIcon = (
         <img
@@ -170,6 +176,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // mist
     } else if (weatherData.mainWeather >= 701 && weatherData.mainWeather <= 781) {
       weatherIcon = (
         <img
@@ -177,6 +184,7 @@ const IndexPage = () => {
           alt={weatherData.mainWeather}
         />
       );
+    // drizzle
     } else if (weatherData.mainWeather >= 300 && weatherData.mainWeather <= 321) {
       weatherIcon = (
         <img
